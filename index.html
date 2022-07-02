@@ -7,18 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <!--<script defer src="javascript/storage.js"></script>-->
+    <script defer src="javascript/main2.js"></script>
 </head>
 
 
 <body>
     <header>
         <h1 class="tituloPri">Bienvenido/a al cine</h1>
+        <h3 class="tituloPri">Eliga su pelicula:</h3>
+        <nav>
+            <ul>
+                <button id="reg" onclick="crearUsuario()">Registrarse</button>
+                <button id="ini" onclick="iniciarSesion()">Iniciar Sesion</button>
+            </ul>
+        </nav>
+            <section id="modal"></section>
     </header>
-    <input id="newUser" type="text" placeholder="Escriba su Nombre">
-    <button onclick="ingresarUsuario()" id="btn4">ACEPTAR</button>
-    <h2 class="nombreUser"></h2>
-    <h3 class="tituloPri">Eliga su pelicula:</h3>
     <main class="contPrinc">
         <div class="divsPeli">
             <img class="imgPeli" src="images/peli1.jpg" alt="Dog">
