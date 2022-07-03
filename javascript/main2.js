@@ -1,6 +1,11 @@
 let modal = document.getElementById("modal");
 let ini = document.getElementById("ini")
 let reg = document.getElementById("reg")
+let input1 = document.getElementsByName("input1")[0];
+let input2 = document.getElementsByName("input2")[0];
+let input3 = document.getElementsByName("input3")[0];
+let count = 4
+let arti = document.querySelector(".movies")
 
 class Usuario {
     constructor(nombre, edad, email, password) {
@@ -28,11 +33,6 @@ crearUsuario2 = () => {
     let password = document.querySelector("#password").value
     let usuario = new Usuario(nombre, edad, email, password)
     localStorage.setItem('usuario', JSON.stringify(usuario))
-    Swal.fire(
-        'Excelente!',
-        'Usuario creado con éxito',
-        'success'
-    )
     cerrarModal()
 }
 
@@ -46,14 +46,11 @@ iniciarSesion2 = () => {
     let password = document.querySelector("#password").value
     let usuario = JSON.parse(localStorage.getItem('usuario'))
     if (usuario.email === email && usuario.password === password) {
-        bienvenida()
+        alert("Bienvenido/a al cine")
     } else {
-        Swal.fire(
-            'Error',
-            'Email o contraseña incorrecto',
-            'error'
-        )
+        alert("El ususario no existe o esta mal ingresado")
     }
+
 }
 
 const boton1 = document.getElementById("btn1");
@@ -70,3 +67,15 @@ const boton3 = document.getElementById("btn3");
 boton3.addEventListener("click", () => {
     alert("Imprimiendo entrada para: Star Wars")
 });
+
+function hacerPedido() {
+    let comida = input1.value
+    let bebida = input2.value
+    let cantidad = input3.value
+    let id = count
+    const div = document.createElement("div")
+    div.className = "pelis peli" + count
+    div.innerHTML= `<div><h4>${comida}</h4><p>${bebida}</p> <p>${cantidad}</p><button value="${count}"`
+    arti.appendChild(div)
+    count++
+}

@@ -10,7 +10,6 @@
     <script defer src="javascript/main2.js"></script>
 </head>
 
-
 <body>
     <header>
         <h1 class="tituloPri">Bienvenido/a al cine</h1>
@@ -21,7 +20,7 @@
                 <button id="ini" onclick="iniciarSesion()">Iniciar Sesion</button>
             </ul>
         </nav>
-            <section id="modal"></section>
+        <section id="modal"></section>
     </header>
     <main class="contPrinc">
         <div class="divsPeli">
@@ -37,6 +36,21 @@
             <button id="btn3">Comprar</button>
         </div>
     </main>
+    <h3>Eliga su snack y bebida:</h3>
+    <div class="div2">
+        <section class="input">
+            <p>Pop, Pop Grande</p>
+            <input type="text" name="input1" id="">
+            <p>Refresco, Refresco Grande:</p>
+            <input type="text" name="input2" id="">
+            <p>Cantidad</p>
+            <input type="number" name="input3" id="">
+            <div><button onclick="hacerPedido()" id="btn">Agregar</button></div>
+        </section>
+    </div>
+    <article>
+        <div class="movies"></div>
+    </article>
 </body>
 
 </html>
